@@ -1,0 +1,22 @@
+# !/bin/sh
+
+########################################
+# The user installs his own files needed by EPIwm #
+########################################
+
+CONFDIR="/etc/X11/epiwm"
+
+if [  ! -d "$HOME/.epiwm" ]; then
+	echo "Create your ~/.epiwm directory"
+	mkdir ~/.epiwm
+	echo "Copy your EPIwm files in ~/.epiwm"
+	cp "$CONFDIR"/* ~/.epiwm
+else
+	echo "~/.epiwm already exists"
+	echo "Do you want to replace it (y/N)?"
+	read rep
+	if [ "$rep" = "y" -o "$rep" = "Y" ]; then
+	    echo "Replace your EPIwm files"
+	    cp -f "$CONFDIR"/* ~/.epiwm
+	fi
+fi

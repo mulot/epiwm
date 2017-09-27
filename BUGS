@@ -1,0 +1,13 @@
+BUGS
+====
+
+- sometimes there are unclosable empty windows
+- the smartplacement is not perfect
+- task menu width is sometimes too big
+- application menus are sometimes not correctly placed
+- when you use CycleWorkspace, and you switch to a window (Alt+Tab or with the task menu) you can not arrive to the correct workspace
+- core dumps with bad config files.
+- and more...
+
+If you have any comments or if you see a bug, please report it (how you do it, what is your system's configuration  ...) to mulot_j@epita.fr
+

@@ -1,0 +1,30 @@
+#################################################
+#						#
+#			Key			#
+#						#
+#################################################
+
+F1 Exec xlock &
+Control+r Exec rxvt &
+Control+Alt+e Exec emacs&
+Control+Alt+n Exec netscape &
+Control+Shift+V Exec gqview &
+Control+Shift+G Exec gimp &
+
+Control+Left Func GoPagerLeft
+Control+Right Func GoPagerRight
+Control+Alt+r Func Restart
+Control+Alt+q Func Exit
+Alt+Tab Func WindowSwitch
+Alt+F3 Func Shade
+Alt+F4 Func Close
+Alt+F5 Func Iconify
+Alt+F7 Func MaxHeight
+Alt+F6 Func MaxWidth
+Alt+F8 Func Max
+Alt+F9 Func MaxFit
+
+
+
+
+

@@ -1,0 +1,51 @@
+##############################
+#			     #		
+# Styles for EPIwm's windows #
+#			     #
+##############################
+
+#FocusMode ClickToFocus
+#FocusMode FocusFollowMouse
+FocusMode SloppyFocus
+#NewAutoFocus
+
+#AutoRaise
+#OpaqueMove
+SmartPlacement
+
+
+TitleActiveColor H black blue
+TitleInactiveColor H black grey
+TitleActiveColor black
+TitleInactiveColor black
+TitleFont fixed
+#TitleFont -adobe-*-*-*-*-*-12-*-*-*-*-*-*-*
+TitleAlign center
+TitleFontActiveColor white
+TitleFontInactiveColor darkgrey
+
+#TitleActiveImage bar.jpg
+#TitleInactiveImage bar2.jpg
+#TitleImageMax
+
+#TitlePosition top
+#TitleShapeAlign right
+TitleHeight 18
+#TitleWidth 50%
+
+BorderActiveColor blue4
+BorderInactiveColor dimgrey
+#BorderStickColor blue
+BorderWidth 2
+
+CloseButton right 4
+MaxButton left 20
+IconifyButton left 4
+MaxHeightButton right 20
+#MaxWidthButton left 52
+#ShadeButton right 4
+
+#MaxButtonImageActive ~/.epiwm/pixmaps/button1.png
+#IconifyButtonImageActive ~/.epiwm/pixmaps/button2.png
+#MaxButtonImageInactive ~/.epiwm/pixmaps/button3.png
+#IconifyButtonImageInactive ~/.epiwm/pixmaps/button4.png

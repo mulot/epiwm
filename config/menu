@@ -1,0 +1,45 @@
+#################################################
+#						#
+#			Menu			#
+#						#
+#################################################
+
+MenuFont fixed
+#MenuFont -adobe-*-*-*-*-*-12-*-*-*-*-*-*-*
+MenuFontActiveColor black
+MenuFontInactiveColor dimgrey
+MenuColor H dimgrey grey
+#MenuColor grey
+#MenuImage toto.gif
+MenuAuto
+
+
+Menu Main "Applications"
+- "Rxvt" Exec rxvt &
+- "Emacs" Exec emacs &
++ "Utils"
+- "Netscape 4" Exec netscape &
++ "Games"
+- "Restart" Func Restart
+- "Quit" Func Exit
+EndMenu
+
+Menu "Games"
+- "Tetris" Exec xtetris &
+- "XBill" Exec xbill &
+- "Eyes" Exec xeyes &
+- "Xpanic" Exec xpanic &
+EndMenu
+
+Menu "Utils"
+- "Kill" Exec xkill &
+- "xlock" Exec xlock &
++ "Draw"
+EndMenu
+
+Menu "Draw"
+- "The Gimp" Exec gimp &
+- "XV" Exec xv &
+- "EE" Exec ee &
+- "GQView" Exec gqview &
+EndMenu

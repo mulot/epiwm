@@ -1,0 +1,17 @@
+Begin3
+Title:          EPIwm Window Manager
+Version:        0.5.6
+Release:	1
+Entered-date:   
+Description:    Window manager for X11
+Keywords:       window-manager, x11, fast, small, configurable, source, gpl.
+Author:         mulot_j@epita.fr (Julien Mulot)
+		poinde_t@epita.fr (Thomas Poindessous)
+		rault_s@epita.fr (Stephane Rault)
+Maintained-by:  mulot_j@epita.fr (Julien Mulot)
+Primary-site:   http://epiwm.sourceforge.net/download
+                107k epiwm-0.5.6.tar.gz
+Home-page:      http://epiwm.sourceforge.net
+Platforms:      X11, C
+Copying-policy: GPL 2.0
+End

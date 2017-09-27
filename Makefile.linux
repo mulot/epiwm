@@ -1,0 +1,130 @@
+##  EPIwm
+#  Copyright (C) 1999 Julien Mulot, Thomas Poindessous, Stephane Rault
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+#
+#
+# Makefile
+#  
+#
+# Started on  Wed Feb 17 00:31:56 1999 Julien Mulot
+# Last update Wed Jan 26 03:36:17 2000 Julien Mulot
+# 
+
+#####################
+# Macro Definitions #
+#####################
+PREFIX		= 
+BIN_PREFIX	= $(PREFIX)/usr/X11R6/
+CONF_PREFIX	= $(PREFIX)/etc/X11
+NAME		= epiwm
+NAME2		= epiconf
+NAME3		= logoepiwm
+MAKE		= make -f Makefile.linux
+SHELL		= /bin/sh
+RM		= /bin/rm -f 	
+REP_SRC		= ./src
+REP_SRC2		= ./modules/epiconf
+REP_SRC3		= ./modules/logoepiwm
+REP_BIN		= ./bin
+DEST_DIR		= $(BIN_PREFIX)/bin
+CONF_DIR	= $(CONF_PREFIX)/epiwm
+LOC		= $(CONF_DIR)
+FILE		= ./config/*
+SRC		= $(REP_SRC)/*.c $(REP_SRC)/*.h
+TAGS		= etags $(SRC)
+VERSION		= 0.5
+RELEASE		= 5
+TAR		= tar cvf 
+BZIP		= bzip2 -9
+GZIP		= gzip -9c
+COMP		= gzip -9v
+UNCOMP		= gzip -df
+STRIP		= strip
+OBJS		= *.o
+
+.SUFFIXES: .h.Z .c.Z .h.gz .c.gz .c.z .h.z 
+
+##############################
+# Basic Compile Instructions #
+##############################
+
+all:	wm logo
+
+wm:
+	cd $(REP_SRC) ;\
+	$(MAKE) LOC="$(LOC)"
+
+conf:
+	cd $(REP_SRC2) ;\
+	$(MAKE)
+
+logo:
+	cd $(REP_SRC3) ;\
+	$(MAKE)
+
+clean:
+	-$(RM) $(REP_BIN)/$(NAME) $(REP_BIN)/$(NAME2) $(REP_BIN)/$(NAME3) $(REP_SRC)/$(OBJS) $(REP_SRC2)/$(OBJS) $(REP_SRC3)/$(OBJS) $(REP_SRC)/*~ $(REP_SRC2)/*~ $(REP_SRC3)/*~ 
+
+tar: clean tag_wm
+	cd .. ;\
+	$(RM) EPIwm-$(VERSION)-$(RELEASE).tar ;\
+	$(TAR) EPIwm-$(VERSION)-$(RELEASE).tar ./EPIwm-$(VERSION)-$(RELEASE)/
+
+tgz: clean tag_wm
+	cd .. ;\
+	$(RM) EPIwm-$(VERSION)-$(RELEASE).tar.gz ;\
+	$(TAR) - ./EPIwm-$(VERSION)-$(RELEASE)/ | $(GZIP) > EPIwm-$(VERSION)-$(RELEASE).tar.gz ;\
+	chmod 644 EPIwm-$(VERSION)-$(RELEASE).tar.gz
+
+bz: clean tag_wm
+	cd .. ;\
+	$(RM) EPIwm-$(VERSION)-$(RELEASE).tar.bz2 ;\
+	$(TAR) EPIwm-$(VERSION)-$(RELEASE).tar ./EPIwm-$(VERSION)-$(RELEASE);\
+	$(BZIP) EPIwm-$(VERSION)-$(RELEASE).tar;\
+	chmod 644 EPIwm-$(VERSION)-$(RELEASE).tar.bz2
+
+.c.Z.c .h.Z.h .c.gz.c .h.gz.h .c.z.c .h.z.h :
+	 -$(UNCOMP) $<
+
+tag_wm:
+	$(RM) TAGS_WM ;\
+	cd $(REP_SRC) ;\
+	etags *.[ch] -o TAGS ;\
+	cp TAGS ../TAGS_WM
+
+tag_conf:
+	$(RM) TAGS_CONF ;\
+	cd $(REP_SRC2) ;\
+	etags *.[ch] -o ../TAGS_CONF
+
+.c.o:
+	$(CC) $(CFLAGS) -c $< 
+
+install: all
+	install -d -m 755 $(CONF_DIR)
+	install -m 644 $(FILE) $(CONF_DIR)
+	install -d -m 755 $(DEST_DIR)
+	install -m 755 $(REP_BIN)/* $(DEST_DIR)
+################
+# Dependencies #
+################
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+Init xsetroot -solid "#356390"
+Init logoepiwm &
+#Init gmc --nowindows >& /dev/null&
+#Init panel >& /dev/null&
+#Init xv -root -quit foo.jpg &
+#Init xsri -root -scale foo.jpg &

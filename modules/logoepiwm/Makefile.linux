@@ -1,0 +1,67 @@
+#
+# Makefile
+#  
+# Made by (Julien Mulot)
+# Login   <mulot@epita.fr>
+#
+# Started on  Mon Jun 14 12:02:53 1999 Julien Mulot
+# Last update Wed Jan 26 17:32:57 2000 Julien Mulot
+# 
+##############################
+# Complete this to make it ! #
+##############################
+NAME 	= logoepiwm
+SRC	= logoEPIwm.c
+INCL  	=		
+################
+# Optional add #
+################
+IPATH   = -I/usr/X11R6/include
+OBJOPT  = -Wall -O2 #-DNOXPM
+EXEOPT  = -Wall -O2 #-DNOXPM
+LPATH   = -L/usr/X11R6/lib -lXpm -lXext -lX11
+
+#####################
+# Macro Definitions #
+#####################
+CC 	    = gcc
+MAKE 	    = make -f Makefile.linux
+SHELL	    = /bin/sh
+OBJS 	    = $(SRC:.c=.o) 
+RM 	    = /bin/rm -f 	
+COMP	    = gzip -9v
+UNCOMP	    = gzip -df
+STRIP	    = strip
+REP_BIN     = ../../bin/
+DEST_DIR    = /usr/X11R6/bin
+
+CFLAGS  = $(OBJOPT) $(IPATH)
+LDFLAGS = $(EXEOPT) $(LPATH)
+
+.SUFFIXES: .h.Z .c.Z .h.gz .c.gz .c.z .h.z 
+
+##############################
+# Basic Compile Instructions #
+##############################
+
+$(NAME): $(OBJS) $(SRC) $(INCL)  
+	$(CC) $(OBJS) $(LDFLAGS) -o $(REP_BIN)$(NAME) 
+	$(STRIP) $(REP_BIN)$(NAME)
+
+depend:
+	$(CC) $(IPATH) -MM $(SRC) 
+clean:
+	-$(RM) $(NAME) $(OBJS) *~
+comp: clean
+	$(COMP) $(INCL) $(SRC)
+ucomp: 
+	$(UNCOMP) $(SRC) $(INCL)
+
+.c.Z.c .h.Z.h .c.gz.c .h.gz.h .c.z.c .h.z.h :
+	 -$(UNCOMP) $<
+
+.c.o:
+	$(CC) $(CFLAGS) -c $< 
+################
+# Dependencies #
+################

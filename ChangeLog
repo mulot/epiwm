@@ -1,0 +1,29 @@
+Changes since version 0.5-6
+---------------------------
+	
+- Fix some memory leaks.
+- Fix a core dump when there are too many args for a command in menu config file.
+- Better redraw of menus.
+- code clean up.
+- Add the MaxFit function for windows.
+- New windows can have automatically the focus by adding NewAutoFocus in the window config file.
+- Use autoconf & automake for installation.
+	
+Changes since version 0.5-4
+---------------------------
+
+- Memory leaks.
+- Fix a segfault in the SendTo function.
+
+Changes since version 0.5-3
+---------------------------
+
+- Now titlebars on sides have got title.
+
+Changes since version 0.5-2
+---------------------------
+
+- add the logoEPIwm module
+- debian and redhat packages are available
+
+

@@ -1,0 +1,99 @@
+INSTALL
+=======
+
+KNOWN SUPPORTED PLATFORMS
+-------------------------
+
+- Intel GNU/Linux Redhat 5.x 6.0, Mandrake and Debian (primary platform)
+- Intel NetBSD 1.4 (primary platform)
+- Sparc NetBSD 1.4
+- Linux PPC
+- Alpha Digital Unix v4.0 (OSF1)
+
+And probably on another...
+
+Patches to make it work on other platforms are welcome.
+
+REQUIREMENTS
+------------
+
+- X11R6
+- make
+
+OPTIONAL
+--------
+
+- Imlib
+- libpng
+- libtiff
+- libxpm
+- libgif
+- libjpeg
+
+INSTALLATION
+------------
+
+Decompress the archive : 
+
+	gunzip -c epiwm-0.5.6.tar.gz | tar xvf -
+
+Enter in the directory, configure it and build it : 
+
+	cd epiwm-0.5.6
+	./configure
+	make
+
+If you want to disable the use of libXpm, add --disable-xpm to ./configure
+If you want to disable the use of Imlib, add --disable-imlib to ./configure
+You can specify where to install config files with the --sysconfdir=[PATH] option of configure.
+see (./configure --help)
+
+If you want to install EPIwm, you must be root and type: 
+
+	make install-strip
+
+
+If it does not work, you can try : 
+
+	make -f Makefile.linux
+	make -f Makefile.linux install
+
+
+* RPM Install:
+Be root and just type :
+
+	rpm -ivh EPIwm-0.5.6-1.i386.rpm
+
+
+* Deb Install:
+Be root and just type :
+
+	dpkg -i epiwm_0.5.6-1_i386.deb
+
+
+Add this following line in your ~/.xinitrc or your ~/.xsession file :
+	
+	exec epiwm
+
+
+It's finished. You can launch EPIwm.
+
+
+THEME
+_____
+
+Decompress the theme in your ~/.epiwm directory : 
+
+	tar xvfz EPIwm_be_theme.tar.gz
+
+Now you have two directories : 
+
+	$ ls ~/.epiwm
+	$ be/ pixmaps/
+
+Edit your .xinitrc file and add the line : 
+
+	exec epiwm -theme ~/.epiwm/be
+
+Now it's OK. So you can have several theme directories in your ~/.epiwm directory. And you can select the theme that you want with the -theme option of the epiwm
+command.

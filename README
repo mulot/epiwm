@@ -1,0 +1,27 @@
+EPIwm
+=====
+
+What is EPIwm ?
+---------------
+
+EPIwm is a window manager born out of a school project. It is intended to be 
+small, fast, and configurable while maintening a large feature set. 
+
+Authors : 
+---------
+
+ 	Mulot Julien <mulot_j@epita.fr>
+ 	Poindessous Thomas
+	Rault Stephane
+
+For more informations go to : http://sourceforge.net/project/?group_id=3939
+
+Any comments, mail mulot_j@epita.fr
+
+Install :
+---------
+
+see INSTALL file
+
+
+Thanks and EPIwm Power !!!

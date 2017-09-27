@@ -1,0 +1,12 @@
+#NoIcon
+IconWidth 48
+IconHeight 24
+IconActiveColor #356390
+IconInactiveColor #356390
+IconFontActiveColor gold
+IconFontInactiveColor black
+#IconActiveImage foo.jpg
+#IconInactiveImage foo2.jpg
+IconFont fixed
+#IconFont -adobe-*-*-*-*-*-12-*-*-*-*-*-*-*
+

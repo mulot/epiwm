@@ -1,0 +1,3 @@
+Add the MaxFit function for Windows.
+New windows can have automatically the focus by adding NewAutoFocus in the window config file.
+use autoconf && automake for install.
