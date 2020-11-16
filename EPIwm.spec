@@ -4,7 +4,7 @@ Version: 0.5.6
 Release: 1
 Copyright: GPL
 Group: X11/Window Managers
-URL: http://epiwm.sourceforge.net
+URL: https://github.com/mulot/epiwm
 Source0: epiwm-0.5.6.tar.gz
 BuildRoot: /tmp/EPIwm
 
