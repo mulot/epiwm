@@ -111,7 +111,18 @@ exec epiwm
 It's finished. You can launch EPIwm.
 
 
-### Theme Installation
+Themes
+------
+### Themes screenshots
+![EPIwm BeOS theme](/epiwm_be.jpg?raw=true "BeOS theme")
+
+![EPIwm Linux theme](/epiwm_techno.jpg?raw=true "Linux theme")
+
+![EPIwm Matrix theme](/epiwm_matrix.jpg?raw=true "Matrix theme")
+
+![EPIwm Fench cheese theme](/epiwm_cheese.jpg?raw=true "Cheese theme")
+
+### Theme installation
 
 
 Decompress the theme in your `~/.epiwm` directory : 
@@ -135,6 +146,8 @@ exec epiwm -theme ~/.epiwm/be
 
 Now it's OK. So you can have several theme directories in your `~/.epiwm` directory. And you can select the theme that you want with the -theme option of the epiwm
 command.
+
+
 
 Authors
 -------
