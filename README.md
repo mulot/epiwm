@@ -1,14 +1,14 @@
 EPIwm
 =====
 
-What is EPIwm ?
----------------
+What is EPIwm?
+--------------
 
 **EPIwm** is a window manager born out of a school project. 
 It is intended to be small, fast, and configurable while maintening a large feature set. 
 
-Installation :
---------------
+Installation
+------------
 
 ### Known Supported Platforms
 
@@ -36,7 +36,7 @@ Patches to make it work on other platforms are welcome.
 * libgif
 * libjpeg
 
-### Manual installation
+### Build
 
 Uncompress the archive : 
 
@@ -60,6 +60,16 @@ You can specify where to install config files with the `--sysconfdir=[PATH]` opt
 
 See (`./configure --help`)
 
+If it does not work, you can try : 
+
+```shell
+make -f Makefile.linux
+```
+
+### Manual installation
+
+Build the tgz archive as indicated above.
+
 If you want to install EPIwm, you must be root and type: 
 
 ```shell
@@ -69,7 +79,6 @@ make install-strip
 If it does not work, you can try : 
 
 ```shell
-make -f Makefile.linux
 make -f Makefile.linux install
 ```
 
@@ -123,8 +132,8 @@ exec epiwm -theme ~/.epiwm/be
 Now it's OK. So you can have several theme directories in your `~/.epiwm` directory. And you can select the theme that you want with the -theme option of the epiwm
 command.
 
-Authors : 
----------
+Authors
+-------
 
 * [Mulot Julien](https://github.com/mulot)
 * [Poindessous Thomas](https://github.com/tpoindessous)
