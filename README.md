@@ -7,8 +7,8 @@ What is EPIwm?
 **EPIwm** is a window manager born out of a school project. 
 It is intended to be small, fast, and configurable while maintening a large feature set. 
 
-Installation
-------------
+Depedencies
+-----------
 
 ### Known Supported Platforms
 
@@ -36,7 +36,8 @@ Patches to make it work on other platforms are welcome.
 * libgif
 * libjpeg
 
-### Build
+Build
+-----
 
 Uncompress the archive : 
 
@@ -65,6 +66,9 @@ If it does not work, you can try :
 ```shell
 make -f Makefile.linux
 ```
+
+Installation
+------------
 
 ### Manual installation
 
