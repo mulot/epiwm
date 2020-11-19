@@ -25,7 +25,6 @@ Patches to make it work on other platforms are welcome.
 ### Requirements
 
 * X11R6
-* make
 
 ### Optional
 
@@ -38,6 +37,13 @@ Patches to make it work on other platforms are welcome.
 
 Build
 -----
+### Requirements
+
+* X11R6 libs
+* cc or gcc
+* make
+
+### Howto
 
 Uncompress the archive : 
 
