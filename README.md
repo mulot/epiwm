@@ -114,13 +114,13 @@ It's finished. You can launch EPIwm.
 Themes
 ------
 ### Themes screenshots
-![EPIwm BeOS theme](/epiwm_be.jpg?raw=true "BeOS theme")
+![EPIwm BeOS theme](/themes/epiwm_be.jpg?raw=true "BeOS theme")
 
-![EPIwm Linux theme](/epiwm_techno.jpg?raw=true "Linux theme")
+![EPIwm Linux theme](/themes/epiwm_techno.jpg?raw=true "Linux theme")
 
-![EPIwm Matrix theme](/epiwm_matrix.jpg?raw=true "Matrix theme")
+![EPIwm Matrix theme](/themes/epiwm_matrix.jpg?raw=true "Matrix theme")
 
-![EPIwm Fench cheese theme](/epiwm_cheese.jpg?raw=true "Cheese theme")
+![EPIwm Fench cheese theme](/themes/epiwm_cheese.jpg?raw=true "Cheese theme")
 
 ### Theme installation
 
