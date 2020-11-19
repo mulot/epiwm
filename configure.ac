@@ -1,7 +1,8 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT(src/button_draw.c)
-AM_CONFIG_HEADER(config.h)
-AM_INIT_AUTOMAKE(epiwm, 0.5.6)
+AC_INIT(epwim, 0.5.6)
+AC_CONFIG_SRCDIR(src/button_draw.c)
+AC_CONFIG_HEADERS(config.h)
+AM_INIT_AUTOMAKE
 
 dnl Checks for programs.
 AC_PROG_CC

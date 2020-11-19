@@ -1,6 +1,6 @@
 EXTRA_DIST = Makefile.linux
 
-INCLUDES = $(X_CFLAGS)
+AM_CPPFLAGS = $(X_CFLAGS)
 
 bin_PROGRAMS = logoepiwm
 

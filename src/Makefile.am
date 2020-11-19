@@ -1,6 +1,6 @@
 EXTRA_DIST = Makefile.linux
 
-INCLUDES = $(IMLIB_CFLAGS) $(X_CFLAGS)
+AM_CPPFLAGS = $(IMLIB_CFLAGS) $(X_CFLAGS)
 
 bin_PROGRAMS = epiwm
 
